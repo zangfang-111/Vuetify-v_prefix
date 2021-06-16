@@ -1,0 +1,33 @@
+@import '../bootstrap'
+@import '../theme'
+
+/* Themes */
+v-icon($material)
+  color: $material.icons.active
+
+  &.v-icon--disabled:not(.input-group__append-icon)
+    color: $material.icons.inactive !important
+
+theme(v-icon, "v-icon")
+
+.v-icon
+  align-items: center
+  display: inline-flex
+  font-feature-settings: 'liga'
+  font-size: 24px
+  justify-content: center
+  line-height: 1
+  transition: $primary-transition
+  vertical-align: middle
+
+  &.v-icon--large
+    font-size: 2.5rem
+
+  &.v-icon--medium
+    font-size: 2rem
+
+  &.v-icon--x-large
+    font-size: 3rem
+
+  &.v-icon--disabled
+    pointer-events: none
